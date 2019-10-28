@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+        
+    </head>
+
+    <body>
+        <div id='app'>
+            <button v-on:click="increase(2, $event)">Clica aí</button>
+            <p>{{ counter }} </a></p>
+            <p v-on:mousemove="updateCoordinates">Coordinates: {{x}} / {{y}}</p>
+        </div>
+    </body>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                counter: 0,
+                x: 0,
+                y: 0
+            },
+            methods: {
+                increase: function(step, event) {                    
+                    this.counter += step;
+                },
+                updateCoordinates: function(event) {
+                    this.x = event.clientX;
+                    this.y = event.clientY;
+                }
+            }
+        })
+    </script>
+</html>
