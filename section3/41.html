@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <ul>
+                <li v-for="(ingredient, i) in ingredients">{{ingredient}} ({{ i }})</li>
+            </ul>
+        </div>
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    ingredients: ['meat', 'fruit', 'cookies'],
+                    persons: [
+                        {name: 'Thiago', age: 35, color: 'red'},
+                        {name: 'Carnaes', age: 35, color: 'blue'},
+                    ]
+                }
+            })
+        </script>
+    </body>
+</html>

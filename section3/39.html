@@ -9,7 +9,7 @@
             <template v-if="show">
                 <p>Inside template</p>
             </template>
-            <p>Do you also see me?</p>
+            <p v-show="show">Do you also see me?</p>
             <button @click="show = !show">Show</button>
         </div>
         <script>
